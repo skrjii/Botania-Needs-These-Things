@@ -19,5 +19,10 @@
     "item": "botanianeedsit:terrasteelmanacapacitor",
     "count": 1,
     "data": 1
-  }
+  },
+  "conditions": [
+    {
+      "type": "botanianeedsit:manacapacitors_enabled"
+    }
+  ]
 }
