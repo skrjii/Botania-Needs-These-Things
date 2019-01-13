@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " s ",
+    "/ /"
+  ],
+  "key": {
+    "s": {
+      "item": "botania:livingrock0slab",
+      "data": 0
+    },
+    "/": {
+      "item": "botania:manaresource",
+      "data": 3
+    }
+  },
+  "result": {
+    "item": "botanianeedsit:itemblockmanacharger",
+    "count": 1,
+    "data": 0
+  }
+}

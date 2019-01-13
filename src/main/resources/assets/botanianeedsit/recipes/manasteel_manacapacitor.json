@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "sms",
+    "pdp",
+    "sms"
+  ],
+  "key": {
+    "s": {
+      "item": "botania:manaresource",
+      "data": 16
+    },
+    "m": {
+      "item": "botania:manaresource",
+      "data": 0
+    },
+    "p": {
+      "item": "botania:manaresource",
+      "data": 23
+    },
+    "d": {
+      "item": "botania:manaresource",
+      "data": 2
+    }
+  },
+  "result": {
+    "item": "botanianeedsit:manasteelmanacapacitor",
+    "count": 1,
+    "data": 1
+  }
+}
