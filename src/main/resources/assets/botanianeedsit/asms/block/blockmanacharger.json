@@ -1,0 +1,10 @@
+{
+  "parameters": {
+  },
+  "clips": {
+    "moving": [ "apply", "botanianeedsit:block/mana_charger@moving", "#anim_cycle" ]
+  },
+  "states": [ "moving" ],
+  "transitions": {},
+  "start_state": "moving"
+}

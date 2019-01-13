@@ -1,0 +1,16 @@
+[
+{
+  "modid": "botanianeedsit",
+  "name": "Botania Needs It!",
+  "description": "Mod adds things that in my opinion that Botania needs",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Workbench61"],
+  "credits": "The Forge and FML guys.",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

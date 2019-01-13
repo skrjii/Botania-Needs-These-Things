@@ -1,0 +1,10 @@
+itemGroup.Botania Needs It=Botania needs it!
+
+item.manaSteelManaCapacitor.name=Аккумулятор Маны из Манастали
+item.manaSteelManaCapacitorCharged.name=Заряженный Аккумулятор Маны из Манастали
+item.terraSteelManaCapacitor.name=Аккумулятор Маны из Террастали
+item.terraSteelManaCapacitorCharged.name=Заряженный Аккумулятор Маны из Террастали
+item.elementiumManaCapacitor.name=Аккумулятор Маны из Элементия
+item.elementiumManaCapacitorCharged.name=Заряженный Аккумулятор Маны из Элементия
+
+tile.blockManaCharger.name=Зарядник Маны

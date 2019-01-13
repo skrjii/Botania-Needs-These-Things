@@ -1,0 +1,10 @@
+itemGroup.Botania Needs It=Botania needs it!
+
+item.manaSteelManaCapacitor.name=Manasteel Manacapacitor
+item.manaSteelManaCapacitorCharged.name=Charged Manasteel Manacapacitor
+item.terraSteelManaCapacitor.name=Terrasteel Manacapacitor
+item.terraSteelManaCapacitorCharged.name=Charged Terrasteel Manacapacitor
+item.elementiumManaCapacitor.name=Elementium Manacapacitor
+item.elementiumManaCapacitorCharged.name=Charged Elementium Manacapacitor
+
+tile.blockManaCharger.name=Mana Charger
