@@ -5,18 +5,16 @@
 package workbench.botanianeedsit.client.render;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.BufferBuilder;
 import net.minecraft.client.renderer.GlStateManager;
+import net.minecraft.client.renderer.block.model.ItemCameraTransforms;
+import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.client.model.animation.FastTESR;
 import workbench.botanianeedsit.ModBlocks;
 import workbench.botanianeedsit.common.tile.TileManaCharger;
 
-import javax.annotation.Nonnull;
-
-public class RendererManaCharger extends FastTESR<TileManaCharger> {
+public class RendererManaCharger extends TileEntitySpecialRenderer<TileManaCharger> {
     @Override
-    public void renderTileEntityFast(@Nonnull TileManaCharger charger, double x, double y, double z, float partialTicks, int destroyStage, float partial, BufferBuilder buffer) {
+    public void render(TileManaCharger charger, double x, double y, double z, float partialTicks, int destroyStage, float alpha) {
         if(!charger.getWorld().isBlockLoaded(charger.getPos(), false)
                 || charger.getWorld().getBlockState(charger.getPos()).getBlock() != ModBlocks.blockManaCharger)
             return;
@@ -25,10 +23,12 @@ public class RendererManaCharger extends FastTESR<TileManaCharger> {
         if (!stack.isEmpty()) {
             GlStateManager.pushMatrix();
             {
-                GlStateManager.translate(x + 0.5, y, z + 0.5);
-                Minecraft.getMinecraft().getRenderManager().
-                        renderEntity(charger._itemEntity, 0, 0, 0,
-                                0, 0, false);
+                GlStateManager.translate(x, y, z);
+                GlStateManager.rotate(90, 1, 0, 0);
+                GlStateManager.scale(0.5f, 0.5f, 0.5f);
+                GlStateManager.translate(1, 1, -0.4f);
+                GlStateManager.rotate(charger._rotation, 0, 0, 1);
+                Minecraft.getMinecraft().getRenderItem().renderItem(charger._stackIn, ItemCameraTransforms.TransformType.FIXED);
             }
             GlStateManager.popMatrix();
         }

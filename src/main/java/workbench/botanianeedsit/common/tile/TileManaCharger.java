@@ -4,7 +4,6 @@
  */
 package workbench.botanianeedsit.common.tile;
 
-import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.item.Item;
@@ -16,10 +15,12 @@ import net.minecraft.util.ITickable;
 import vazkii.botania.api.mana.IManaItem;
 import vazkii.botania.api.mana.IManaPool;
 import workbench.botanianeedsit.ModBlocks;
+import workbench.botanianeedsit.lib.Lib;
 
 public class TileManaCharger extends TileSimpleInventory implements ITickable {
     public static final int RATE = 1000;
-    public EntityItem _itemEntity;
+    public ItemStack _stackIn;
+    public int _rotation;
 
     @Override
     public int getInventorySize() {
@@ -107,11 +108,7 @@ public class TileManaCharger extends TileSimpleInventory implements ITickable {
     }
 
     protected void initItem() {
-        this._itemEntity = new EntityItem(world, 0, 0, 0, itemHandler.getStackInSlot(0).copy());
-    }
-
-    @Override
-    public boolean hasFastRenderer() {
-        return true;
+        this._stackIn = itemHandler.getStackInSlot(0).copy();
+        this._rotation = Lib.RANDOM.nextInt(360);
     }
 }

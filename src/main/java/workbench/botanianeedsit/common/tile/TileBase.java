@@ -47,12 +47,11 @@ public class TileBase extends TileEntity {
 
     public void readPacketNBT(NBTTagCompound compound) {}
 
-    // @Override
-    // public void handleUpdateTag(NBTTagCompound tag) {
-    // super.handleUpdateTag(tag);
-    // Log.debug("handle update tag");
-    // readPacketNBT(tag);
-    // }
+//     @Override
+//     public void handleUpdateTag(NBTTagCompound tag) {
+//        super.handleUpdateTag(tag);
+//        readPacketNBT(tag);
+//     }
 
     @Override
     public final SPacketUpdateTileEntity getUpdatePacket() {
