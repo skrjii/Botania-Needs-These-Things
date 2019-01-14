@@ -5,6 +5,7 @@
 package workbench.botanianeedsit.common.tile;
 
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -12,6 +13,8 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.ITickable;
+import net.minecraft.util.SoundCategory;
+import net.minecraftforge.items.ItemHandlerHelper;
 import vazkii.botania.api.mana.IManaItem;
 import vazkii.botania.api.mana.IManaPool;
 import workbench.botanianeedsit.ModBlocks;
@@ -85,7 +88,7 @@ public class TileManaCharger extends TileSimpleInventory implements ITickable {
                 return true;
             } else return false;
         } else if (heldItem.isEmpty() && !itemHandler.getStackInSlot(0).isEmpty()) {
-            playerIn.setHeldItem(hand, itemHandler.getStackInSlot(0).copy());
+            ItemHandlerHelper.giveItemToPlayer(playerIn, itemHandler.getStackInSlot(0).copy());
             itemHandler.setStackInSlot(0, ItemStack.EMPTY);
             return true;
         } else return false;

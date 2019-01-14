@@ -4,6 +4,7 @@
  */
 package workbench.botanianeedsit.common.block;
 
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
@@ -27,7 +28,9 @@ public class BlockManaCharger extends BlockBase {
     public static final AxisAlignedBB AABB = new AxisAlignedBB((1f/8) + (1f/32), (1f/16) + (1f/32), (1f/8) + (1f/32), 1 - (1f/8) - (1f/32), (1f/16) + (1f/32) + (1f/8), 1 - (1f/8) - (1f/32));
 
     public BlockManaCharger(String name, boolean registerCreativeTab) {
-        super(name, registerCreativeTab, Material.ROCK);
+        super(name, registerCreativeTab, Material.WOOD);
+        setSoundType(SoundType.WOOD);
+        setHardness(1f);
     }
 
     @Override
