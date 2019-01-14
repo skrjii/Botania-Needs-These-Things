@@ -4,7 +4,11 @@
  */
 package workbench.botanianeedsit.lib;
 
+import java.util.Random;
+
 public final class Lib {
+    public static final Random RANDOM = new Random();
+
     public static final class General {
         public static final String MOD_ID = "botanianeedsit";
         public static final String MOD_PREFIX = MOD_ID + ":";
