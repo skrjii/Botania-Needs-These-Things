@@ -1,5 +1,5 @@
 itemGroup.Botania Needs These Things!=Botania Needs These Things!
-config.allowCapacitors.name=Allow Manacapacitors
+config.allowCapacitors.name=Allows you to craft Manacapacitors
 
 item.manaSteelManaCapacitor.name=Manasteel Manacapacitor
 item.manaSteelManaCapacitorCharged.name=Charged Manasteel Manacapacitor
