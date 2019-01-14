@@ -1,4 +1,5 @@
 itemGroup.Botania Needs It=Botania needs it!
+config.allowCapacitors.name=Allow Manacapacitors
 
 item.manaSteelManaCapacitor.name=Manasteel Manacapacitor
 item.manaSteelManaCapacitorCharged.name=Charged Manasteel Manacapacitor
