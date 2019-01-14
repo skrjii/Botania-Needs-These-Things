@@ -28,6 +28,7 @@ public class TileManaCharger extends TileSimpleInventory implements ITickable {
     public static final int RATE = 1000;
     public ItemStack _stackIn;
     public int _rotation;
+    public int _comparatorOutput = 0;
 
     @Override
     public int getInventorySize() {
@@ -50,11 +51,13 @@ public class TileManaCharger extends TileSimpleInventory implements ITickable {
                 IManaPool pool = (IManaPool) tilePool;
 
                 if (pool.isOutputtingPower()) {
-                    if (manaItem.canReceiveManaFromPool(stack, tilePool) && manaItem.getMana(stack) != manaItem.getMaxMana(stack)) {
+                    if (manaItem.canReceiveManaFromPool(stack, tilePool) && manaItem.getMana(stack) != manaItem.getMaxMana(stack)  && pool.getCurrentMana() > 0) {
                         int mana = Math.min(manaItem.getMaxMana(stack) - manaItem.getMana(stack), RATE);
                         mana = Math.min(pool.getCurrentMana(), mana);
                         pool.recieveMana(-mana);
                         manaItem.addMana(stack, mana);
+                        if (_comparatorOutput != getComparatorOutput())
+                            world.updateComparatorOutputLevel(pos, ModBlocks.blockManaCharger);
                     }
                 } else {
                     if (manaItem.canExportManaToPool(stack, tilePool)) {
@@ -63,6 +66,8 @@ public class TileManaCharger extends TileSimpleInventory implements ITickable {
                             int mana = Math.min(currentManaInStack, RATE);
                             pool.recieveMana(mana);
                             manaItem.addMana(stack, -mana);
+                            if (_comparatorOutput != getComparatorOutput())
+                                world.updateComparatorOutputLevel(pos, ModBlocks.blockManaCharger);
                         }
                     }
                 }
@@ -85,6 +90,7 @@ public class TileManaCharger extends TileSimpleInventory implements ITickable {
     public void onContentChanged() {
         if (!itemHandler.getStackInSlot(0).isEmpty())
             initItem();
+        world.updateComparatorOutputLevel(pos, ModBlocks.blockManaCharger);
         world.notifyBlockUpdate(pos, ModBlocks.blockManaCharger.getDefaultState(), ModBlocks.blockManaCharger.getDefaultState(), 3);
     }
 
@@ -106,6 +112,21 @@ public class TileManaCharger extends TileSimpleInventory implements ITickable {
             itemHandler.setStackInSlot(0, ItemStack.EMPTY);
             return true;
         } else return false;
+    }
+
+    public int getComparatorOutput() {
+        ItemStack stack = itemHandler.getStackInSlot(0).copy();
+        if (stack.isEmpty())
+            return 0;
+
+        IManaItem manaItem = (IManaItem) stack.getItem();
+        int currentMana = manaItem.getMana(stack);
+        int maxMana = manaItem.getMaxMana(stack);
+
+        if (maxMana < 1 || currentMana < 1) return 1;
+
+        _comparatorOutput = 1 + (int) ((currentMana / (float) maxMana) * 14) + 1;
+        return _comparatorOutput;
     }
 
     @Override

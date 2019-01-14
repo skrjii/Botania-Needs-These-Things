@@ -87,6 +87,22 @@ public class BlockManaCharger extends BlockBase {
     }
 
     @Override
+    public boolean hasComparatorInputOverride(IBlockState state) {
+        return true;
+    }
+
+    @Override
+    public int getComparatorInputOverride(IBlockState blockState, World worldIn, BlockPos pos) {
+        if (!worldIn.isRemote) {
+            TileEntity tileEntity = worldIn.getTileEntity(pos);
+            if (tileEntity instanceof TileManaCharger) {
+                return ((TileManaCharger) tileEntity).getComparatorOutput();
+            }
+        }
+        return 0;
+    }
+
+    @Override
     public boolean hasTileEntity(IBlockState state) {
         return true;
     }
