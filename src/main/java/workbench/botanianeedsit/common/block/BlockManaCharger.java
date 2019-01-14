@@ -75,7 +75,6 @@ public class BlockManaCharger extends BlockBase {
         if (world.isRemote) return true;
         if (canStay(world, pos)) return true;
         else {
-            Mod.logger.info("break block");
             world.setBlockToAir(pos);
             InventoryHelper.spawnItemStack(world, pos.getX(), pos.getY(), pos.getZ(), new ItemStack(ModBlocks.blockManaCharger, 1));
             return false;
