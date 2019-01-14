@@ -5,20 +5,24 @@
 package workbench.botanianeedsit.common.tile;
 
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.ITickable;
-import net.minecraft.util.SoundCategory;
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.ItemHandlerHelper;
+import net.minecraftforge.items.ItemStackHandler;
 import vazkii.botania.api.mana.IManaItem;
 import vazkii.botania.api.mana.IManaPool;
 import workbench.botanianeedsit.ModBlocks;
 import workbench.botanianeedsit.lib.Lib;
+
+import javax.annotation.Nullable;
 
 public class TileManaCharger extends TileSimpleInventory implements ITickable {
     public static final int RATE = 1000;
@@ -68,6 +72,16 @@ public class TileManaCharger extends TileSimpleInventory implements ITickable {
     }
 
     @Override
+    public ItemStackHandler createItemstackHandler() {
+        return new ItemstackHandler(this, true){
+            @Override
+            public int getSlotLimit(int slot) {
+                return 1;
+            }
+        };
+    }
+
+    @Override
     public void onContentChanged() {
         if (!itemHandler.getStackInSlot(0).isEmpty())
             initItem();
@@ -113,5 +127,17 @@ public class TileManaCharger extends TileSimpleInventory implements ITickable {
     protected void initItem() {
         this._stackIn = itemHandler.getStackInSlot(0).copy();
         this._rotation = Lib.RANDOM.nextInt(360);
+    }
+
+    @Override
+    public boolean hasCapability(Capability<?> capability, @Nullable EnumFacing facing) {
+        return capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY || super.hasCapability(capability, facing);
+    }
+
+    @Nullable
+    @Override
+    public <T> T getCapability(Capability<T> capability, @Nullable EnumFacing facing) {
+        return capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY ? CapabilityItemHandler.ITEM_HANDLER_CAPABILITY.cast(getItemHandler()) :
+                super.getCapability(capability, facing);
     }
 }
