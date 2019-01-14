@@ -12,7 +12,7 @@ public final class Lib {
     public static final class General {
         public static final String MOD_ID = "botanianeedsit";
         public static final String MOD_PREFIX = MOD_ID + ":";
-        public static final String MOD_NAME = "Botania Needs It";
+        public static final String MOD_NAME = "Botania Needs These Things!";
         public static final String DEPENDENCIES = "required-after:botania@[r1.10,);";
 //        public static final String DEPENDENCIES = "";
         public static final String PROXY_SERVER = "workbench.botanianeedsit.common.core.proxy.CommonProxy";
