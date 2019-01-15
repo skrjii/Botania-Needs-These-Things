@@ -18,6 +18,21 @@ public class Config {
     @net.minecraftforge.common.config.Config.Comment("Allow you to craft Manacapacitors")
     public static boolean allowCapacitors = true;
 
+    @net.minecraftforge.common.config.Config.RequiresMcRestart
+    @net.minecraftforge.common.config.Config.LangKey("config.manasteelManaCapacitorVolume.name")
+    @net.minecraftforge.common.config.Config.RangeInt(min = 0, max = 1000000)
+    public static int manasteelManaCapacitorVolume = 1000;
+
+    @net.minecraftforge.common.config.Config.RequiresMcRestart
+    @net.minecraftforge.common.config.Config.LangKey("config.elementiumManaCapacitorVolume.name")
+    @net.minecraftforge.common.config.Config.RangeInt(min = 0, max = 1000000)
+    public static int elementiumManaCapacitorVolume = 10_000;
+
+    @net.minecraftforge.common.config.Config.RequiresMcRestart
+    @net.minecraftforge.common.config.Config.LangKey("config.terrasteelManacapacitorVolume.name")
+    @net.minecraftforge.common.config.Config.RangeInt(min = 0, max = 1000000)
+    public static int terrasteelManacapacitorVolume = 100_000;
+
     @SubscribeEvent
     public static void onConfigChanged(ConfigChangedEvent event) {
         ConfigManager.sync(Lib.General.MOD_ID, net.minecraftforge.common.config.Config.Type.INSTANCE);

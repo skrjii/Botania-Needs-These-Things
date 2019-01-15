@@ -13,6 +13,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import vazkii.botania.api.item.IManaDissolvable;
 import vazkii.botania.api.mana.IManaPool;
+import workbench.botanianeedsit.Config;
 import workbench.botanianeedsit.lib.Lib;
 
 public class ItemManaCapacitor extends ItemBase implements IManaDissolvable {
@@ -83,9 +84,9 @@ public class ItemManaCapacitor extends ItemBase implements IManaDissolvable {
     }
 
     public enum CapacitorType {
-        MANA_STEEL(1000),
-        ELEMENTIUM(10000),
-        TERRA_STEEL(100000);
+        MANA_STEEL(Config.manasteelManaCapacitorVolume),
+        ELEMENTIUM(Config.elementiumManaCapacitorVolume),
+        TERRA_STEEL(Config.terrasteelManacapacitorVolume);
         public final int mana;
 
         CapacitorType(int mana) {
