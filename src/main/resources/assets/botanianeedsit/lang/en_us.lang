@@ -14,7 +14,7 @@ item.elementiumManaCapacitorCharged.name=Charged Elementium Manacapacitor
 tile.blockManaCharger.name=Mana Charger
 
 lexicon.manacapacitorsEntry.name=Manacapacitors
-lexicon.manacapacitorsEntry.page0=Manacapacitors are a way to store mana in chests. They are not like rings or tablets you can't use mana from them to feed your tools.<br>Change the pool mod to "From pool to item" and throw capacitor into it. The capacitor will become charged. If you want to transfer mana from a charged capacitor to a pool, change the pool mod to "From item to pool".
+lexicon.manacapacitorsEntry.page0=Manacapacitors are a way to store mana in chests! They are not like rings or tablets you can't use mana from them to feed your tools.<br>Change the pool mod to "From pool to item" and throw capacitor into it. The capacitor will become charged. If you want to transfer mana from a charged capacitor to a pool, change the pool mod to "From item to pool".
 lexicon.manacapacitorsEntry.page1=Сheck the config to find out the volume of the capacitor.
 lexicon.manacapacitorsEntry.page2=Сheck the config to find out the volume of the capacitor.
 lexicon.manacapacitorsEntry.page3=Сheck the config to find out the volume of the capacitor.
