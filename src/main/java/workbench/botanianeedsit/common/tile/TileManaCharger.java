@@ -36,6 +36,11 @@ public class TileManaCharger extends TileSimpleInventory implements ITickable {
     }
 
     @Override
+    public void onLoad() {
+        _comparatorOutput = getComparatorOutput();
+    }
+
+    @Override
     public void update() {
         if (world.isRemote) return;
 
