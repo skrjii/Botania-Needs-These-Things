@@ -6,6 +6,7 @@ package workbench.botanianeedsit.common.block;
 
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.state.BlockFaceShape;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.InventoryHelper;
@@ -117,6 +118,11 @@ public class BlockManaCharger extends BlockBase implements ILexiconable {
     @Override
     public TileEntity createTileEntity(World world, IBlockState state) {
         return new TileManaCharger();
+    }
+
+    @Override
+    public BlockFaceShape getBlockFaceShape(IBlockAccess worldIn, IBlockState state, BlockPos pos, EnumFacing face) {
+        return BlockFaceShape.UNDEFINED;
     }
 
     @Override
