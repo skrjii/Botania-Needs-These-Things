@@ -11,6 +11,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import workbench.botanianeedsit.common.core.proxy.IProxy;
+import workbench.botanianeedsit.common.lexicon.LexiconIntegration;
 import workbench.botanianeedsit.lib.Lib;
 
 @net.minecraftforge.fml.common.Mod(modid = Lib.General.MOD_ID, name = Lib.General.MOD_NAME, dependencies = Lib.General.DEPENDENCIES)
@@ -31,6 +32,7 @@ public class Mod {
     @net.minecraftforge.fml.common.Mod.EventHandler
     public static void init(FMLInitializationEvent event) {
         proxy.init(event);
+        LexiconIntegration.init();
     }
 
     @net.minecraftforge.fml.common.Mod.EventHandler

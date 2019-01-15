@@ -17,14 +17,16 @@ import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import vazkii.botania.api.lexicon.ILexiconable;
+import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.api.mana.IManaPool;
-import workbench.botanianeedsit.Mod;
 import workbench.botanianeedsit.ModBlocks;
+import workbench.botanianeedsit.common.lexicon.LexiconIntegration;
 import workbench.botanianeedsit.common.tile.TileManaCharger;
 
 import javax.annotation.Nullable;
 
-public class BlockManaCharger extends BlockBase {
+public class BlockManaCharger extends BlockBase implements ILexiconable {
     public static final AxisAlignedBB AABB = new AxisAlignedBB((1f/8) + (1f/32), (1f/16) + (1f/32), (1f/8) + (1f/32), 1 - (1f/8) - (1f/32), (1f/16) + (1f/32) + (1f/8), 1 - (1f/8) - (1f/32));
 
     public BlockManaCharger(String name, boolean registerCreativeTab) {
@@ -99,6 +101,11 @@ public class BlockManaCharger extends BlockBase {
             }
         }
         return 0;
+    }
+
+    @Override
+    public LexiconEntry getEntry(World world, BlockPos pos, EntityPlayer player, ItemStack lexicon) {
+        return LexiconIntegration.manaChargerEntry;
     }
 
     @Override

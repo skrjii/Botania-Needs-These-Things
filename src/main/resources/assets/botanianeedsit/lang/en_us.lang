@@ -9,3 +9,11 @@ item.elementiumManaCapacitor.name=Elementium Manacapacitor
 item.elementiumManaCapacitorCharged.name=Charged Elementium Manacapacitor
 
 tile.blockManaCharger.name=Mana Charger
+
+lexicon.manacapacitorsEntry.name=Manacapacitors
+lexicon.manacapacitorsEntry.page0=
+lexicon.manacapacitorsEntry.page1=
+
+lexicon.manaChargerEntry.name=Mana Charger
+lexicon.manaChargerEntry.page0=
+lexicon.manaChargerEntry.page1=

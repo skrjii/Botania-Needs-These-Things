@@ -29,4 +29,11 @@ public final class Lib {
 
         public static final String tileManaCharger_Name = "tileManaCharger";
     }
+
+    public static final class Lexicon {
+        public static final String capacitorsEntryName = "lexicon.manacapacitorsEntry.name";
+        public static final String capacitorsEntryPage = "lexicon.manacapacitorsEntry.page";
+        public static final String manaChargerEntryName = "lexicon.manaChargerEntry.name";
+        public static final String manaChargerEntryPage = "lexicon.manaChargerEntry.page";
+    }
 }
