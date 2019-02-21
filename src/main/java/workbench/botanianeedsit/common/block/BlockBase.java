@@ -17,17 +17,14 @@ import workbench.botanianeedsit.client.ModelHandler;
 import workbench.botanianeedsit.lib.Lib;
 
 public class BlockBase extends Block implements ModelHandler.IModelRegister {
-    public BlockBase(String name, boolean registerCreativeTab, Material blockMaterialIn, MapColor blockMapColorIn) {
+    public BlockBase(String name, Material blockMaterialIn, MapColor blockMapColorIn) {
         super(blockMaterialIn, blockMapColorIn);
         setRegistryName(new ResourceLocation(Lib.General.MOD_ID, name));
         setTranslationKey(name);
-        if (registerCreativeTab) {
-            setCreativeTab(ModCreativeTab.INSTACE);
-        }
     }
 
-    public BlockBase(String name, boolean registerCreativeTab, Material materialIn) {
-        this(name, registerCreativeTab, materialIn, materialIn.getMaterialMapColor());
+    public BlockBase(String name, Material materialIn) {
+        this(name, materialIn, materialIn.getMaterialMapColor());
     }
 
     @Override

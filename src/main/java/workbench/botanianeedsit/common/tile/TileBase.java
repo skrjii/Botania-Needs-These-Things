@@ -13,20 +13,16 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 public class TileBase extends TileEntity {
+    public NBTTagCompound writePacketNBT(NBTTagCompound compound) { return compound; }
 
-    @Override
-    public boolean shouldRefresh(World world, BlockPos pos, @Nonnull IBlockState oldState, @Nonnull IBlockState newState) {
-        return oldState.getBlock() != newState.getBlock();
-    }
+    public void readPacketNBT(NBTTagCompound compound) {}
 
-    @Nonnull
     @Override
     public NBTTagCompound writeToNBT(NBTTagCompound compound) {
-        NBTTagCompound ret = super.writeToNBT(compound);
-        writePacketNBT(ret);
-        return ret;
+        return writePacketNBT(super.writeToNBT(compound));
     }
 
     @Override
@@ -35,32 +31,26 @@ public class TileBase extends TileEntity {
         readPacketNBT(compound);
     }
 
-    @Nonnull
     @Override
     public NBTTagCompound getUpdateTag() {
-        NBTTagCompound cmp = super.getUpdateTag();
-        writePacketNBT(cmp);
-        return cmp;
+        return writePacketNBT(super.getUpdateTag());
     }
 
-    public void writePacketNBT(NBTTagCompound compound) {}
-
-    public void readPacketNBT(NBTTagCompound compound) {}
-
-//     @Override
-//     public void handleUpdateTag(NBTTagCompound tag) {
-//        super.handleUpdateTag(tag);
-//        readPacketNBT(tag);
-//     }
-
     @Override
-    public final SPacketUpdateTileEntity getUpdatePacket() {
-        NBTTagCompound tag = getUpdateTag();
-        return new SPacketUpdateTileEntity(pos, -999, tag);
+    public void handleUpdateTag(NBTTagCompound tag) {
+        super.handleUpdateTag(tag);
+        readPacketNBT(tag);
+    }
+
+    @Nullable
+    @Override
+    public SPacketUpdateTileEntity getUpdatePacket() {
+        return new SPacketUpdateTileEntity(this.pos, -999, writePacketNBT(new NBTTagCompound()));
     }
 
     @Override
     public void onDataPacket(NetworkManager net, SPacketUpdateTileEntity packet) {
+        super.onDataPacket(net, packet);
         readPacketNBT(packet.getNbtCompound());
     }
 }

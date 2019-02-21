@@ -22,6 +22,7 @@ import vazkii.botania.api.lexicon.ILexiconable;
 import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.api.mana.IManaPool;
 import workbench.botanianeedsit.ModBlocks;
+import workbench.botanianeedsit.ModCreativeTab;
 import workbench.botanianeedsit.common.lexicon.LexiconIntegration;
 import workbench.botanianeedsit.common.tile.TileManaCharger;
 
@@ -30,8 +31,8 @@ import javax.annotation.Nullable;
 public class BlockManaCharger extends BlockBase implements ILexiconable {
     public static final AxisAlignedBB AABB = new AxisAlignedBB((1f/8) + (1f/32), (1f/16) + (1f/32), (1f/8) + (1f/32), 1 - (1f/8) - (1f/32), (1f/16) + (1f/32) + (1f/8), 1 - (1f/8) - (1f/32));
 
-    public BlockManaCharger(String name, boolean registerCreativeTab) {
-        super(name, registerCreativeTab, Material.WOOD);
+    public BlockManaCharger(String name) {
+        super(name, Material.WOOD);
         setSoundType(SoundType.WOOD);
         setHardness(1f);
     }

@@ -19,7 +19,7 @@ import workbench.botanianeedsit.lib.Lib;
 
 @Mod.EventBusSubscriber
 public class ModBlocks {
-    public static final Block blockManaCharger = new BlockManaCharger(Lib.Names.blockManaCharger_UnlocName, true);
+    public static final Block blockManaCharger = new BlockManaCharger(Lib.Names.blockManaCharger_UnlocName).setCreativeTab(ModCreativeTab.INSTACE);
 
     @SubscribeEvent
     public static void init(RegistryEvent.Register<Block> event) {
@@ -30,9 +30,10 @@ public class ModBlocks {
         registerTileEntities();
     }
 
-    public static void registerItemBlocks(IForgeRegistry<Item> registry) {
-        registry.register(new ItemBlock(blockManaCharger).
-                setRegistryName(new ResourceLocation(Lib.General.MOD_ID, Lib.Names.itemBlockManaCharger_UnlocName)));
+    @SubscribeEvent
+    public static void registerItemBlocks(RegistryEvent.Register<Item> event) {
+        event.getRegistry().register(new ItemBlock(blockManaCharger).
+                setRegistryName(blockManaCharger.getRegistryName()));
     }
 
     public static void registerTileEntities() {

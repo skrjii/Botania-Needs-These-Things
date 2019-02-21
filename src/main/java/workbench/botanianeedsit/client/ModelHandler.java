@@ -28,15 +28,6 @@ public class ModelHandler {
         });
     }
 
-    public static void registerItemMetas(Item item, int maxExclusive, IntFunction<String> metaToName) {
-        for (int i = 0; i < maxExclusive; i++) {
-            ModelLoader.setCustomModelResourceLocation(
-                    item, i,
-                    new ModelResourceLocation(Lib.General.MOD_PREFIX + metaToName.apply(i), "inventory")
-            );
-        }
-    }
-
     public interface IModelRegister {
         void registerModels();
     }

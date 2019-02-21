@@ -35,9 +35,10 @@ public abstract class TileSimpleInventory extends TileBase {
     public void onBlockBreak() {}
 
     @Override
-    public void writePacketNBT(NBTTagCompound compound) {
-        super.writePacketNBT(compound);
+    public NBTTagCompound writePacketNBT(NBTTagCompound compound) {
+        compound = super.writePacketNBT(compound);
         compound.merge(itemHandler.serializeNBT());
+        return compound;
     }
 
     @Override

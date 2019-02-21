@@ -11,28 +11,18 @@ public final class Lib {
 
     public static final class General {
         public static final String MOD_ID = "botanianeedsit";
-        public static final String MOD_PREFIX = MOD_ID + ":";
         public static final String MOD_NAME = "Botania Needs These Things!";
         public static final String DEPENDENCIES = "required-after:botania@[r1.10,);";
-//        public static final String DEPENDENCIES = "";
         public static final String PROXY_SERVER = "workbench.botanianeedsit.common.core.proxy.CommonProxy";
         public static final String PROXY_CLIENT = "workbench.botanianeedsit.client.core.proxy.ClientProxy";
     }
 
     public static final class Names {
         public static final String blockManaCharger_UnlocName = "blockManaCharger";
-
-        public static final String itemBlockManaCharger_UnlocName = "itemBlockManaCharger";
-        public static final String itemManaSteelManaCapacitor_UnlocName = "manaSteelManaCapacitor";
-        public static final String itemElemetiumManaCapacitor_UnlocName = "elementiumManaCapacitor";
-        public static final String itemTerraSteelManaCapacitor_UnlocName = "terraSteelManaCapacitor";
-
         public static final String tileManaCharger_Name = "tileManaCharger";
     }
 
     public static final class Lexicon {
-        public static final String capacitorsEntryName = "lexicon.manacapacitorsEntry.name";
-        public static final String capacitorsEntryPage = "lexicon.manacapacitorsEntry.page";
         public static final String manaChargerEntryName = "lexicon.manaChargerEntry.name";
         public static final String manaChargerEntryPage = "lexicon.manaChargerEntry.page";
     }

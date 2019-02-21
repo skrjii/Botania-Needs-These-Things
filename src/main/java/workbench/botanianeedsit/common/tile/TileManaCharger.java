@@ -17,6 +17,7 @@ import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.ItemHandlerHelper;
 import net.minecraftforge.items.ItemStackHandler;
+import vazkii.botania.api.internal.VanillaPacketDispatcher;
 import vazkii.botania.api.mana.IManaItem;
 import vazkii.botania.api.mana.IManaPool;
 import workbench.botanianeedsit.ModBlocks;
@@ -88,7 +89,8 @@ public class TileManaCharger extends TileSimpleInventory implements ITickable {
         if (!itemHandler.getStackInSlot(0).isEmpty())
             initItem();
         markDirty();
-        world.notifyBlockUpdate(pos, ModBlocks.blockManaCharger.getDefaultState(), ModBlocks.blockManaCharger.getDefaultState(), 3);
+        VanillaPacketDispatcher.dispatchTEToNearbyPlayers(this);
+//        world.notifyBlockUpdate(pos, ModBlocks.blockManaCharger.getDefaultState(), ModBlocks.blockManaCharger.getDefaultState(), 3);
     }
 
     public boolean handleClick(EntityPlayer playerIn, EnumHand hand) {
