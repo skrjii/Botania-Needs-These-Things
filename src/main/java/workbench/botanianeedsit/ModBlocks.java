@@ -14,12 +14,28 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.registries.IForgeRegistry;
 import workbench.botanianeedsit.common.block.BlockManaCharger;
+import workbench.botanianeedsit.common.item.ItemManaCapacitor;
 import workbench.botanianeedsit.common.tile.TileManaCharger;
 import workbench.botanianeedsit.lib.Lib;
 
 @Mod.EventBusSubscriber
 public class ModBlocks {
-    public static final Block blockManaCharger = new BlockManaCharger(Lib.Names.blockManaCharger_UnlocName).setCreativeTab(ModCreativeTab.INSTACE);
+    public static final Block blockManaCharger = new BlockManaCharger(Lib.Names.blockManaCharger).setCreativeTab(ModCreativeTab.INSTACE);
+
+    public static final Item manasteelCapacitor = new ItemManaCapacitor(ItemManaCapacitor.CapacitorType.MANA_STEEL).
+            setRegistryName(Lib.Names.manasteelCapacitor).
+            setTranslationKey(Lib.Names.manasteelCapacitor).
+            setCreativeTab(ModCreativeTab.INSTACE);
+
+    public static final Item elementiumCapacitor = new ItemManaCapacitor(ItemManaCapacitor.CapacitorType.ELEMENTIUM).
+            setRegistryName(Lib.Names.elementiumCapacitor).
+            setTranslationKey(Lib.Names.elementiumCapacitor).
+            setCreativeTab(ModCreativeTab.INSTACE);
+
+    public static final Item terrasteelCapacitor = new ItemManaCapacitor(ItemManaCapacitor.CapacitorType.TERRA_STEEL).
+            setRegistryName(Lib.Names.terrasteelCapacitor).
+            setTranslationKey(Lib.Names.terrasteelCapacitor).
+            setCreativeTab(ModCreativeTab.INSTACE);
 
     @SubscribeEvent
     public static void init(RegistryEvent.Register<Block> event) {
@@ -31,12 +47,18 @@ public class ModBlocks {
     }
 
     @SubscribeEvent
-    public static void registerItemBlocks(RegistryEvent.Register<Item> event) {
-        event.getRegistry().register(new ItemBlock(blockManaCharger).
+    public static void registerItems(RegistryEvent.Register<Item> event) {
+        IForgeRegistry<Item> registry = event.getRegistry();
+
+        registry.register(manasteelCapacitor);
+        registry.register(elementiumCapacitor);
+        registry.register(terrasteelCapacitor);
+
+        registry.register(new ItemBlock(blockManaCharger).
                 setRegistryName(blockManaCharger.getRegistryName()));
     }
 
     public static void registerTileEntities() {
-        GameRegistry.registerTileEntity(TileManaCharger.class, new ResourceLocation(Lib.General.MOD_ID, Lib.Names.tileManaCharger_Name));
+        GameRegistry.registerTileEntity(TileManaCharger.class, new ResourceLocation(Lib.General.MOD_ID, Lib.Names.tileManaCharger));
     }
 }

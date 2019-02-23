@@ -17,6 +17,6 @@ public class ModCreativeTab extends CreativeTabs {
 
     @Override
     public ItemStack createIcon() {
-        return new ItemStack(ModBlocks.blockManaCharger);
+        return new ItemStack(ModBlocks.manasteelCapacitor);
     }
 }

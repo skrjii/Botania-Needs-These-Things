@@ -1,6 +1,25 @@
 itemGroup.Botania Needs These Things!=Botania braucht diese Dinge!
+config.allowCapacitors.name=Manakondensatoren aktivieren
+config.manasteelManaCapacitorVolume.name=Ladung des Manastahl Manakondensators
+config.elementiumManaCapacitorVolume.name=Ladung des Elementium Manakondensators
+config.terrasteelManacapacitorVolume.name=Ladung des Terrastahl Manakondensators
+
+item.manaSteelManaCapacitor.name=Manastahl Manakondensator
+item.manaSteelManaCapacitorCharged.name=Geladener Manastahl Manakondensator
+item.terraSteelManaCapacitor.name=Terrastahl Manakondensator
+item.terraSteelManaCapacitorCharged.name=Geladener Terrastahl Manakondensator
+item.elementiumManaCapacitor.name=Elementium Manakondensator
+item.elementiumManaCapacitorCharged.name=Geladener Elementium Manakondensator
 
 tile.blockManaCharger.name=Mana Ladevorrichtung
+
+lexicon.manacapacitorsEntry.name=Manakondensator
+lexicon.manacapacitorsEntry.page0=Manakondensatoren geben die Möglichkeit Mana in Truhen zu lagern. Anders als bei Tabletts und Bändern kann damit keine Rüstung und kein Werkzeug geladen werden. Stelle das Manapool auf "Von Pool zu Item" und platziere den Kondensator darauf. Der Kondensator wird dadurch aufgeladen. Wenn du Mana aus dem Kondensator wieder in das Pool transferieren möchtest, stelle das Manapool auf "Von Item zu Pool" und platziere den Kondensator darauf.
+
+lexicon.manacapacitorsEntry.page1=Die Kapazität eines Manakondensator kann aus der Konfiguration abgerufen werden.
+lexicon.manacapacitorsEntry.page2=Die Kapazität eines Manakondensator kann aus der Konfiguration abgerufen werden.
+lexicon.manacapacitorsEntry.page3=Die Kapazität eines Manakondensator kann aus der Konfiguration abgerufen werden.
+
 lexicon.manaChargerEntry.name=Mana Ladevorrichtung
 lexicon.manaChargerEntry.page0=Wie oft hast du deinen Terra-Brecher schon im Manapool vergessen?<br>Ab jetzt kannst du beruhigt schlafen.
 lexicon.manaChargerEntry.page1=Wird auf dem Mana Pool platziert

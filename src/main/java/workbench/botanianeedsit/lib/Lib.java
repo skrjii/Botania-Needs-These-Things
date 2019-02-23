@@ -18,12 +18,17 @@ public final class Lib {
     }
 
     public static final class Names {
-        public static final String blockManaCharger_UnlocName = "blockManaCharger";
-        public static final String tileManaCharger_Name = "tileManaCharger";
+        public static final String blockManaCharger = "blockManaCharger";
+        public static final String tileManaCharger = "tileManaCharger";
+        public static final String manasteelCapacitor = "manaSteelManaCapacitor";
+        public static final String elementiumCapacitor = "elementiumManaCapacitor";
+        public static final String terrasteelCapacitor = "terraSteelManaCapacitor";
     }
 
     public static final class Lexicon {
         public static final String manaChargerEntryName = "lexicon.manaChargerEntry.name";
         public static final String manaChargerEntryPage = "lexicon.manaChargerEntry.page";
+        public static final String manaCapacitorsEntryName = "lexicon.manacapacitorsEntry.name";
+        public static final String manaCapacitorsEntryPage = "lexicon.manacapacitorsEntry.page";
     }
 }

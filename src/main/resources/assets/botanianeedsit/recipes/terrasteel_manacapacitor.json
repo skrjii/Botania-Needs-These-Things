@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "wmw",
+    "ptp",
+    "wmw"
+  ],
+  "key": {
+    "w": {
+      "item": "botania:manaresource",
+      "data": 22
+    },
+    "m": {
+      "item": "botania:manaresource",
+      "data": 0
+      },
+    "t": {
+      "item": "botania:manaresource",
+      "data": 18
+    },
+    "p": {
+      "item": "botania:manaresource",
+      "data": 1
+    }
+  },
+  "result": {
+    "item": "botanianeedsit:terrasteelmanacapacitor",
+    "count": 1,
+    "data": 1
+  },
+  "conditions": [
+    {
+      "type": "botanianeedsit:manacapacitors_enabled"
+    }
+  ]
+}

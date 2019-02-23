@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " w ",
+    "ede",
+    " w "
+  ],
+  "key": {
+    "e": {
+      "item": "botania:manaresource",
+      "data": 7
+    },
+    "w": {
+      "item": "botania:manaresource",
+      "data": 22
+    },
+    "d": {
+      "item": "botania:manaresource",
+      "data": 9
+    }
+  },
+  "result": {
+    "item": "botanianeedsit:elementiummanacapacitor",
+    "count": 6,
+    "data": 1
+  },
+  "conditions": [
+    {
+      "type": "botanianeedsit:manacapacitors_enabled"
+    }
+  ]
+}

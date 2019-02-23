@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "botanianeedsit:item/manasteel_capacitor_charged"
+  }
+}
