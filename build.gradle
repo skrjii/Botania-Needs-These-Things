@@ -7,10 +7,13 @@ buildscript {
         classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
     }
 }
+plugins {
+    id "com.wynprice.cursemaven" version "2.1.1"
+}
 apply plugin: 'net.minecraftforge.gradle.forge'
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 
-version = "1.12.2-2.1-release"
+version = "1.12.2-3.0-release"
 group = "workbench.botanianeedsit" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "botanianeedsit"
 
@@ -33,6 +36,9 @@ minecraft {
 }
 
 dependencies {
+    deobfCompile 'curse.maven:botania:2846950'
+    deobfCompile 'curse.maven:baubles:2518667'
+    
     // you may put jars on which you depend on in ./libs
     // or you may define them like so..
     //compile "some.group:artifact:version:classifier"

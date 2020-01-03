@@ -8,30 +8,29 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import vazkii.botania.api.BotaniaAPI;
 import vazkii.botania.api.lexicon.LexiconEntry;
+import workbench.botanianeedsit.BotaniaNeedsTheseThings;
 import workbench.botanianeedsit.Config;
-import workbench.botanianeedsit.ModBlocks;
-import workbench.botanianeedsit.lib.Lib;
-
+import workbench.botanianeedsit.ModObjects;
 public class LexiconIntegration {
     public static LexiconEntry capacitorEntry;
     public static LexiconEntry manaChargerEntry;
 
     public static void init() {
         if (Config.allowCapacitors) {
-            capacitorEntry = new LexiconEntry(Lib.Lexicon.manaCapacitorsEntryName, BotaniaAPI.categoryMana);
-            capacitorEntry.setLexiconPages(BotaniaAPI.internalHandler.textPage(Lib.Lexicon.manaCapacitorsEntryPage + "0"),
-                    BotaniaAPI.internalHandler.craftingRecipePage(Lib.Lexicon.manaCapacitorsEntryPage + "1", new ResourceLocation(Lib.General.MOD_ID, "manasteel_manacapacitor")),
-                    BotaniaAPI.internalHandler.craftingRecipePage(Lib.Lexicon.manaCapacitorsEntryPage + "2", new ResourceLocation(Lib.General.MOD_ID, "elementium_manacapacitor")),
-                    BotaniaAPI.internalHandler.craftingRecipePage(Lib.Lexicon.manaCapacitorsEntryPage + "3", new ResourceLocation(Lib.General.MOD_ID, "terrasteel_manacapacitor"))).
-                    setIcon(new ItemStack(ModBlocks.manasteelCapacitor));
+            capacitorEntry = new LexiconEntry("lexicon.manacapacitorsEntry.name", BotaniaAPI.categoryMana);
+            capacitorEntry.setLexiconPages(BotaniaAPI.internalHandler.textPage("lexicon.manacapacitorsEntry.page0"),
+                    BotaniaAPI.internalHandler.craftingRecipePage("lexicon.manacapacitorsEntry.page1", new ResourceLocation(BotaniaNeedsTheseThings.MOD_ID, ModObjects.MANA_CAPACITOR_MANASTEEL_NAME)),
+                    BotaniaAPI.internalHandler.craftingRecipePage("lexicon.manacapacitorsEntry.page2", new ResourceLocation(BotaniaNeedsTheseThings.MOD_ID, ModObjects.MANA_CAPACITOR_ELEMENTIUM_NAME)),
+                    BotaniaAPI.internalHandler.craftingRecipePage("lexicon.manacapacitorsEntry.page3", new ResourceLocation(BotaniaNeedsTheseThings.MOD_ID, ModObjects.MANA_CAPACITOR_TERRASTEEL_NAME))).
+                    setIcon(new ItemStack(ModObjects.MANA_CAPACITOR_MANASTEEL));
 
             BotaniaAPI.addEntry(capacitorEntry, BotaniaAPI.categoryMana);
         }
 
-        manaChargerEntry = new LexiconEntry(Lib.Lexicon.manaChargerEntryName, BotaniaAPI.categoryMana);
-        manaChargerEntry.setLexiconPages(BotaniaAPI.internalHandler.textPage(Lib.Lexicon.manaChargerEntryPage + "0"),
-                BotaniaAPI.internalHandler.craftingRecipePage(Lib.Lexicon.manaChargerEntryPage + "1", new ResourceLocation(Lib.General.MOD_ID, "mana_charger"))).
-                setIcon(new ItemStack(ModBlocks.blockManaCharger));
+        manaChargerEntry = new LexiconEntry("lexicon.manaChargerEntry.name", BotaniaAPI.categoryMana);
+        manaChargerEntry.setLexiconPages(BotaniaAPI.internalHandler.textPage("lexicon.manaChargerEntry.page0"),
+                BotaniaAPI.internalHandler.craftingRecipePage("lexicon.manaChargerEntry.page1", new ResourceLocation(BotaniaNeedsTheseThings.MOD_ID, ModObjects.MANA_CHARGER_BLOCK_NAME))).
+                setIcon(new ItemStack(ModObjects.MANA_CHARGER_BLOCK));
 
         BotaniaAPI.addEntry(manaChargerEntry, BotaniaAPI.categoryMana);
     }

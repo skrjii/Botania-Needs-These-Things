@@ -5,17 +5,14 @@
 package workbench.botanianeedsit.client;
 
 import net.minecraft.block.Block;
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
-import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import workbench.botanianeedsit.lib.Lib;
+import net.minecraftforge.fml.relauncher.Side;
+import workbench.botanianeedsit.BotaniaNeedsTheseThings;
 
-import java.util.function.IntFunction;
-
-@Mod.EventBusSubscriber
+@Mod.EventBusSubscriber(modid = BotaniaNeedsTheseThings.MOD_ID, value = Side.CLIENT)
 public class ModelHandler {
     @SubscribeEvent
     public static void registerModels(ModelRegistryEvent event) {

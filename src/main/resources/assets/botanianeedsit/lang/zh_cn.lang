@@ -1,17 +1,17 @@
-itemGroup.Botania Needs These Things!=植物魔法需要它
+itemGroup.botanianeedsit=植物魔法需要它
 config.allowCapacitors.name=启用储魔宝石
 config.manasteelManaCapacitorVolume.name=魔力钢储魔宝石容量
 config.elementiumManaCapacitorVolume.name=源质钢储魔宝石容量
 config.terrasteelManacapacitorVolume.name=泰拉钢储魔宝石容量
 
-item.manaSteelManaCapacitor.name=魔力钢储魔宝石
-item.manaSteelManaCapacitorCharged.name=魔力钢充能宝石
-item.terraSteelManaCapacitor.name=泰拉钢储魔宝石
-item.terraSteelManaCapacitorCharged.name=泰拉钢充能宝石
-item.elementiumManaCapacitor.name=源质钢储魔宝石
-item.elementiumManaCapacitorCharged.name=源质钢充能宝石
+item.mana_capacitor_manasteel.name=魔力钢储魔宝石
+item.mana_capacitor_manasteel_charged.name=魔力钢充能宝石
+item.mana_capacitor_terrasteel.name=泰拉钢储魔宝石
+item.mana_capacitor_terrasteel_charged.name=泰拉钢充能宝石
+item.mana_capacitor_elementium.name=源质钢储魔宝石
+item.mana_capacitor_elementium_charged.name=源质钢充能宝石
 
-tile.blockManaCharger.name=魔力充能基座
+tile.mana_charger.name=魔力充能基座
 
 lexicon.manacapacitorsEntry.name=储魔宝石
 lexicon.manacapacitorsEntry.page0=储魔宝石是一个存储魔力的 好方法！ 它不像戒指或石板那样， 你不能用它给你的工具提供 魔力。<br>将魔力池模式改为“魔力池 → 物品”并丢一个储魔宝石， 宝石将被充能。 如果你想把魔力存进魔力池， 将魔力池模式反过来即可。

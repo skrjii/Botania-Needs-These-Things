@@ -9,14 +9,12 @@ import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.client.renderer.block.model.ItemCameraTransforms;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.item.ItemStack;
-import workbench.botanianeedsit.ModBlocks;
-import workbench.botanianeedsit.common.tile.TileManaCharger;
+import workbench.botanianeedsit.common.tile.ManaChargerTile;
 
-public class RendererManaCharger extends TileEntitySpecialRenderer<TileManaCharger> {
+public class RendererManaCharger extends TileEntitySpecialRenderer<ManaChargerTile> {
     @Override
-    public void render(TileManaCharger charger, double x, double y, double z, float partialTicks, int destroyStage, float alpha) {
-        if(!charger.getWorld().isBlockLoaded(charger.getPos(), false)
-                || charger.getWorld().getBlockState(charger.getPos()).getBlock() != ModBlocks.blockManaCharger)
+    public void render(ManaChargerTile charger, double x, double y, double z, float partialTicks, int destroyStage, float alpha) {
+        if(!charger.getWorld().isBlockLoaded(charger.getPos(), false))
             return;
 
         ItemStack stack = charger.getItemHandler().getStackInSlot(0);
@@ -28,7 +26,7 @@ public class RendererManaCharger extends TileEntitySpecialRenderer<TileManaCharg
                 GlStateManager.scale(0.5f, 0.5f, 0.5f);
                 GlStateManager.translate(1, 1, -0.4f);
                 GlStateManager.rotate(charger._rotation, 0, 0, 1);
-                Minecraft.getMinecraft().getRenderItem().renderItem(charger._stackIn, ItemCameraTransforms.TransformType.FIXED);
+                Minecraft.getMinecraft().getRenderItem().renderItem(stack, ItemCameraTransforms.TransformType.FIXED);
             }
             GlStateManager.popMatrix();
         }

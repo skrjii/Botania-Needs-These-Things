@@ -6,19 +6,17 @@ package workbench.botanianeedsit.client.core.proxy;
 
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import workbench.botanianeedsit.Mod;
 import workbench.botanianeedsit.client.render.RendererManaCharger;
-import workbench.botanianeedsit.common.core.proxy.CommonProxy;
-import workbench.botanianeedsit.common.tile.TileManaCharger;
+import workbench.botanianeedsit.common.core.proxy.IProxy;
+import workbench.botanianeedsit.common.tile.ManaChargerTile;
 
-public class ClientProxy extends CommonProxy {
+public class ClientProxy implements IProxy {
     @Override
     public void preInit(FMLPreInitializationEvent event) {
         bindTESRs();
     }
 
     public void bindTESRs() {
-//        Mod.logger.error("bind TESRs");
-        ClientRegistry.bindTileEntitySpecialRenderer(TileManaCharger.class, new RendererManaCharger());
+        ClientRegistry.bindTileEntitySpecialRenderer(ManaChargerTile.class, new RendererManaCharger());
     }
 }
