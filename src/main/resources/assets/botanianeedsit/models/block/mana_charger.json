@@ -1,6 +1,11 @@
 {
 	"credit": "Made with Blockbench",
 	"parent": "minecraft:block/block",
+	"textures": {
+		"wood": "botania:blocks/livingwood0",
+		"rock": "botania:blocks/livingrock0",
+		"particle": "botania:blocks/livingrock0"
+	},
 	"elements": [
 		{
 			"name": "stone",

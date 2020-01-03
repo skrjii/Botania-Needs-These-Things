@@ -1,0 +1,19 @@
+{
+  "result": {
+    "item": "botanianeedsit:mana_charger",
+    "count": 1
+  },
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " r ",
+    "/ /"
+  ],
+  "key": {
+    "r": {
+      "item": "botania:livingrock"
+    },
+    "/": {
+      "item": "botania:livingwood_twig"
+    }
+  }
+}

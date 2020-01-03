@@ -1,0 +1,19 @@
+{
+  "itemGroup.botanianeedsit": "植物魔法需要它",
+
+  "item.botanianeedsit.mana_capacitor_manasteel": "魔力钢储魔宝石",
+  "item.botanianeedsit.mana_capacitor_manasteel.charged": "魔力钢充能宝石",
+  "item.botanianeedsit.mana_capacitor_terrasteel": "泰拉钢储魔宝石",
+  "item.botanianeedsit.mana_capacitor_terrasteel.charged": "泰拉钢充能宝石",
+  "item.botanianeedsit.mana_capacitor_elementium": "源质钢储魔宝石",
+  "item.botanianeedsit.mana_capacitor_elementium.charged": "源质钢充能宝石",
+
+  "block.botanianeedsit.mana_charger": "魔力充能基座",
+
+  "botanianeedsit.entry.mana_charger": "魔力充能基座",
+  "botanianeedsit.page.mana_charger.0": "你经常忘记你的泰拉粉碎者 漂在魔力池里？$(br)现在你可以睡个安稳觉了。",
+  "botanianeedsit.page.mana_charger.1": "架在魔力池上。",
+
+  "botanianeedsit.entry.mana_capacitors": "储魔宝石",
+  "botanianeedsit.page.mana_capacitors.0": "储魔宝石是一个存储魔力的 好方法！ 它不像戒指或石板那样， 你不能用它给你的工具提供 魔力。$(br)将魔力池模式改为“魔力池 → 物品”并丢一个储魔宝石， 宝石将被充能。 如果你想把魔力存进魔力池， 将魔力池模式反过来即可。"
+}

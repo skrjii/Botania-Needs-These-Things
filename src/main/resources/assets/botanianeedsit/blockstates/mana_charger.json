@@ -1,0 +1,8 @@
+{
+  "forge_marker": 1,
+  "variants": {
+    "": {
+      "model": "botanianeedsit:block/mana_charger"
+    }
+  }
+}

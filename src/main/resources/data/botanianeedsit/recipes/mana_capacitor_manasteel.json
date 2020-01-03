@@ -1,0 +1,23 @@
+{
+  "result": {
+    "item": "botanianeedsit:mana_capacitor_manasteel",
+    "count": 64
+  },
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "botania:manasteel_ingot"
+    },
+    {
+      "item": "minecraft:bowl"
+    }
+  ],
+  "pattern": [
+    "m",
+    "b"
+  ],
+  "key": {
+    "m": "botania:manasteel_ingot",
+    "b": "minecraft:bowl"
+  }
+}

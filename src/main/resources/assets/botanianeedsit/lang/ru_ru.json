@@ -1,0 +1,19 @@
+{
+  "itemGroup.botanianeedsit": "Botania Needs These Things!",
+
+  "item.botanianeedsit.mana_capacitor_manasteel": "Аккумулятор Маны из Манастали",
+  "item.botanianeedsit.mana_capacitor_manasteel.charged": "Заряженный Аккумулятор Маны из Манастали",
+  "item.botanianeedsit.mana_capacitor_terrasteel": "Аккумулятор Маны из Террастали",
+  "item.botanianeedsit.mana_capacitor_terrasteel.charged": "Заряженный Аккумулятор Маны из Террастали",
+  "item.botanianeedsit.mana_capacitor_elementium": "Аккумулятор Маны из Элементия",
+  "item.botanianeedsit.mana_capacitor_elementium.charged": "Заряженный Аккумулятор Маны из Элементия",
+
+  "block.botanianeedsit.mana_charger": "Зарядник Маны",
+
+  "botanianeedsit.entry.mana_charger": "Зарядник Маны",
+  "botanianeedsit.page.mana_charger.0": "Как часто вы забывали о своем Землекрушителе, плавающем в Бассейне Маны?$(br)Теперь вы можете спать спокойно.",
+  "botanianeedsit.page.mana_charger.1": "Устанавливается на Бассейн Маны",
+
+  "botanianeedsit.entry.mana_capacitors": "Аккумуляторы Маны",
+  "botanianeedsit.page.mana_capacitors.0": "Аккумуляторы Маны - это еще один способ хранения маны. Они ведут себя иначе, чем кольца или планшеты, Вы не можете накормить свои инструмены из них.$(br)Измените режим Бассейна на 'Из бассейна в предмет' и бросьте Аккумулятор в него, он станет заряженным. Если вы хотите разрядить Аккумулятор, измените режим Бассейна на 'Из предмета в бассейн'."
+}

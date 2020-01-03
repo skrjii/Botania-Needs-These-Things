@@ -1,5 +1,0 @@
-{
-  "conditions": {
-    "manacapacitors_enabled": "workbench.botanianeedsit.common.crafting.ManacapacitorConditionFactory"
-  }
-}

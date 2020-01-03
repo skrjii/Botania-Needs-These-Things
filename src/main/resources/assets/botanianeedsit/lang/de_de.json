@@ -1,0 +1,19 @@
+{
+  "itemGroup.botanianeedsit": "Botania braucht diese Dinge!",
+
+  "item.botanianeedsit.mana_capacitor_manasteel": "Manastahl Manakondensator",
+  "item.botanianeedsit.mana_capacitor_manasteel.charged": "Geladener Manastahl Manakondensator",
+  "item.botanianeedsit.mana_capacitor_terrasteel": "Terrastahl Manakondensator",
+  "item.botanianeedsit.mana_capacitor_terrasteel.charged": "Geladener Terrastahl Manakondensator",
+  "item.botanianeedsit.mana_capacitor_elementium": "Elementium Manakondensator",
+  "item.botanianeedsit.mana_capacitor_elementium.charged": "Geladener Elementium Manakondensator",
+
+  "block.botanianeedsit.mana_charger": "Mana Ladevorrichtung",
+
+  "botanianeedsit.entry.mana_charger": "Mana Ladevorrichtung",
+  "botanianeedsit.page.mana_charger.0": "Wie oft hast du deinen Terra-Brecher schon im Manapool vergessen?$(br)Ab jetzt kannst du beruhigt schlafen.",
+  "botanianeedsit.page.mana_charger.1": "Wird auf dem Mana Pool platziert",
+
+  "botanianeedsit.entry.mana_capacitors": "Manakondensator",
+  "botanianeedsit.page.mana_capacitors.0": "Manakondensatoren geben die Möglichkeit Mana in Truhen zu lagern. Anders als bei Tabletts und Bändern kann damit keine Rüstung und kein Werkzeug geladen werden. Stelle das Manapool auf 'Von Pool zu Item' und platziere den Kondensator darauf. Der Kondensator wird dadurch aufgeladen. Wenn du Mana aus dem Kondensator wieder in das Pool transferieren möchtest, stelle das Manapool auf 'Von Item zu Pool' und platziere den Kondensator darauf."
+}

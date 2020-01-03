@@ -1,0 +1,23 @@
+{
+  "result": {
+    "item": "botanianeedsit:mana_capacitor_elementium",
+    "count": 25
+  },
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "botania:elementium_ingot"
+    },
+    {
+      "item": "minecraft:bucket"
+    }
+  ],
+  "pattern": [
+    "e",
+    "b"
+  ],
+  "key": {
+    "e": "botania:elementium_ingot",
+    "b": "minecraft:bucket"
+  }
+}

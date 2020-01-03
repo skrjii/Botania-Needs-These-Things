@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="[28,)"
+[[mods]]
+modId="botanianeedsit"
+version="${file.jarVersion}"
+displayName="Botania Needs These Things!"
+authors="Workbench61"
+
+[[dependencies.botanianeedsit]]
+    modId="forge"
+    mandatory=true
+    versionRange="[28,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.examplemod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.14.4,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.examplemod]]
+    modId="botania"
+    mandatory=true
+    versionRange="[r1.11,)"
+    ordering="NONE"
+    side="BOTH"

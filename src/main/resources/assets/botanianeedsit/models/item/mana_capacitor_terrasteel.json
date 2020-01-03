@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "botanianeedsit:item/mana_capacitor_terrasteel"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "botanianeedsit:charged": 1
+      },
+      "model": "botanianeedsit:item/mana_capacitor_terrasteel_charged"
+    }
+  ]
+}

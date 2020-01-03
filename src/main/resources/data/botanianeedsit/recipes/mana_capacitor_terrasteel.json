@@ -1,0 +1,29 @@
+{
+  "result": {
+    "item": "botanianeedsit:mana_capacitor_terrasteel",
+    "count": 5
+  },
+  "ingredients": [
+    {
+      "item": "botania:terrasteel_ingot"
+    },
+    {
+      "item": "botania:manasteel_ingot"
+    },
+    {
+      "item": "botania:manasteel_ingot"
+    },
+    {
+      "item": "botania:manasteel_ingot"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "pattern": [
+    "mtm",
+    " m "
+  ],
+  "key": {
+    "t": "botania:terrasteel_ingot",
+    "m": "botania:manasteel_ingot"
+  }
+}
