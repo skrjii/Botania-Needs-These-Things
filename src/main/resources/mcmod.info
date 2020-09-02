@@ -2,13 +2,13 @@
 {
   "modid": "botanianeedsit",
   "name": "Botania Needs These Things!",
-  "description": "Mod adds things that in my opinion that Botania needs",
+  "description": "Useful Botania addon.",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "",
-  "updateUrl": "",
+  "url": "https://www.curseforge.com/minecraft/mc-mods/botania-needs-these-things",
+  "updateUrl": "https://raw.githubusercontent.com/Workbench61/Botania-Needs-These-Things/master/updates.json",
   "authorList": ["Workbench61"],
-  "credits": "The Forge and FML guys.",
+  "credits": "",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

@@ -22,10 +22,11 @@ import workbench.botanianeedsit.common.lexicon.LexiconIntegration;
 import workbench.botanianeedsit.common.tile.ManaChargerTile;
 
 @Mod.EventBusSubscriber(modid = BotaniaNeedsTheseThings.MOD_ID)
-@Mod(modid = BotaniaNeedsTheseThings.MOD_ID, name = BotaniaNeedsTheseThings.MOD_NAME, dependencies = "required-after:botania@[r1.10,);")
+@Mod(modid = BotaniaNeedsTheseThings.MOD_ID, name = BotaniaNeedsTheseThings.MOD_NAME, dependencies = "required-after:botania@[r1.10,);", updateJSON = BotaniaNeedsTheseThings.UPDATE_URL)
 public class BotaniaNeedsTheseThings {
     public static final String MOD_ID = "botanianeedsit";
     public static final String MOD_NAME = "Botania Needs These Things!";
+    public static final String UPDATE_URL = "https://raw.githubusercontent.com/Workbench61/Botania-Needs-These-Things/master/updates.json";
 
     @SidedProxy(serverSide = "workbench.botanianeedsit.common.core.proxy.CommonProxy", clientSide = "workbench.botanianeedsit.client.core.proxy.ClientProxy")
     public static IProxy proxy;
