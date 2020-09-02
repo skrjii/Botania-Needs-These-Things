@@ -1,5 +1,4 @@
 # Botania-Needs-These-Things
-Minecraft mod that adds things that in my opinion that Botania needs.
+Useful Botania addon.
 
-Now it provide ability to charge/discharge manaitems without needs to drop them into the pool
-and ability to store mana in the chest!!!
+Provides ability to charge/discharge manaitems without having to drop them into the pool.
