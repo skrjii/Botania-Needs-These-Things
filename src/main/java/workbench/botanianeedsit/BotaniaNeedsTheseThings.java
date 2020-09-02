@@ -62,7 +62,7 @@ public class BotaniaNeedsTheseThings {
                         setCreativeTab(ModObjects.creativeTab),
                 new ManaCapacitorItem(Config.elementiumManaCapacitorVolume).
                         setRegistryName(MOD_ID, ModObjects.MANA_CAPACITOR_ELEMENTIUM_NAME).
-                        setTranslationKey(ModObjects.MANA_CAPACITOR_MANASTEEL_NAME).
+                        setTranslationKey(ModObjects.MANA_CAPACITOR_ELEMENTIUM_NAME).
                         setCreativeTab(ModObjects.creativeTab),
                 new ManaCapacitorItem(Config.terrasteelManacapacitorVolume).
                         setRegistryName(MOD_ID, ModObjects.MANA_CAPACITOR_TERRASTEEL_NAME).
